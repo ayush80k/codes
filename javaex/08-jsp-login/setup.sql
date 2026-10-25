@@ -1,0 +1,7 @@
+CREATE DATABASE IF NOT EXISTS college;
+USE college;
+CREATE TABLE IF NOT EXISTS users(
+  username VARCHAR(30) PRIMARY KEY,
+  password VARCHAR(30)
+);
+INSERT INTO users VALUES('student','pass123') ON DUPLICATE KEY UPDATE password='pass123';
